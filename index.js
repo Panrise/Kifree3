@@ -3,7 +3,7 @@ $(document).on("click", "#sendButton", function () {
 	var sendText = $("#sendText").val();
 	var sendroom = $("#sendroom").val();
 	var url = "https://taketake.azurewebsites.net/api/HttpTrigger1?code=WRYArh2Z8sXoJM0VyKf0hgzk6UWhXQr2sZbCZTB9LtiBLKZbA/BETg==";
-	url = url + "&name=" + sendName + "&message=" + sendText+ "&room" + sendroom ;
+	url = url + "&name=" + sendName + "&message=" + sendText+ "&room=" + sendroom ;
 	$.get(url).done(function (string) {
 		var object = JSON.parse(string);
 		var myHTML = '';
@@ -18,6 +18,9 @@ $(document).on("click", "#sendButton", function () {
 			myHTML += '    </div>';
 			myHTML += '  </div>';
 			myHTML += '</div>';
+			myHTM  += object[i].room;
+			
+
 		}
 		$("#message").html(myHTML);
 	});
