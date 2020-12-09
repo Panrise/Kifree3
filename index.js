@@ -18,7 +18,7 @@ $(document).on("click", "#sendButton", function () {
 			myHTML += '    </div>';
 			myHTML += '  </div>';
 			myHTML += '</div>';
-			myHTM  += object[i].room;
+			myHTML  += object[i].room;
 			
 
 		}
